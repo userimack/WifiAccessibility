@@ -21,7 +21,7 @@ def wifi():
 
         if(choice ==1):
             os.system("nmcli radio wifi")
-            print("If it Disabled then Turn it On using 3rd option")
+            print("If it Disabled then Turn it On using 2nd option")
             print("")
 
         elif(choice ==2):
