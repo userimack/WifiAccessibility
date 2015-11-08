@@ -9,10 +9,9 @@ def wifi():
         print("2.Turn Wifi ON")
         print("3.Turn Wifi OFF")
         print("4.List Available Access Points")
-        print("5.Rescan List")
-        print("6.Connect to an Open WiFi")
-        print("7.Connect to a PasswordProtected WiFi ")
-        print("8.Exit")
+        print("5.Connect to an Open WiFi")
+        print("6.Connect to a Password Protected WiFi ")
+        print("7.Exit")
         print("")
 
         
@@ -37,23 +36,19 @@ def wifi():
         elif(choice == 4):
             os.system("nmcli device wifi list")
 
-        elif(choice == 5):                
-            print("Rescanning....")
-            os.system("nmcli device wifi list")
-
-        elif(choice == 6):  
+        elif(choice == 5):  
 
             Id = raw_input("Enter the SSID or BSSID: ")
 
             os.system("nmcli device wifi connect "+ Id)
-        elif(choice ==7):       
+        elif(choice ==6):       
             Id = raw_input("Enter the SSID or BSSID: ")
             print("")
             password = raw_input("Enter the password: ")
 
-            os.system("nmcli device wifi connect "+ Id +"connect "+password)
+            os.system("nmcli device wifi connect "+ Id +" password "+password)
 
-        elif (choice == 8):
+        elif (choice == 7):
             exit(1)
 
         else:
